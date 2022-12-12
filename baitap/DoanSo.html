@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="number">
+<button onclick="playGame()">Đoán</button>
+<h1 id="result"></h1>
+</body>
+<script>
+let numberRandom = Math.floor(Math.random()*10) ;
+console.log(numberRandom)
+let count = 3;
+function playGame () {
+    count++;
+    let number = document.getElementById("number").value
+    if(number == numberRandom) {
+        document.getElementById("result").innerHTML ="Bạn chuẩn"
+    } else {
+        document.getElementById("result").innerHTML = "Bạn thua"
+    }
+}
+</script>
+</html>
